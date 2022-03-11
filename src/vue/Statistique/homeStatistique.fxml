@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.HomeStatistiqueContoller">
+   <center>
+      <BarChart fx:id="livreChart" animated="false" prefHeight="524.0" prefWidth="828.0" title="Top 5 Livres" BorderPane.alignment="CENTER">
+        <xAxis>
+          <CategoryAxis label="Livres" side="BOTTOM" fx:id="xAxe">
+               <tickLabelFont>
+                  <Font name="System Bold Italic" size="15.0" />
+               </tickLabelFont>
+            </CategoryAxis>
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yAxe" label="Etoiles" minorTickLength="1.0" side="LEFT" tickUnit="1.0" upperBound="5.0">
+               <tickLabelFont>
+                  <Font size="13.0" />
+               </tickLabelFont>
+            </NumberAxis>
+        </yAxis>
+      </BarChart>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Statistique ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#onLivre" text="Livres" />
+                  <MenuItem mnemonicParsing="false" onAction="#onAuteurs" text="Auteurs" />
+                  <MenuItem mnemonicParsing="false" onAction="#onGenres" text="Genres" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Top">
+              <items>
+                <MenuItem mnemonicParsing="false">
+                     <graphic>
+                        <TextField fx:id="topField" onAction="#onTopField" promptText="5" />
+                     </graphic>
+                  </MenuItem>
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

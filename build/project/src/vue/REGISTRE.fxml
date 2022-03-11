@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="inscriptionPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="510.0" style="-fx-background-radius: 15; -fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="emailFieldnscription" layoutX="109.0" layoutY="189.0" prefHeight="50.0" prefWidth="291.0" promptText="Email" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nomUserIFieldnscription" layoutX="109.0" layoutY="121.0" prefHeight="50.0" prefWidth="291.0" promptText="Nom d'utilisateur" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="connectButtonInscription" layoutX="139.0" layoutY="439.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #0AB8DA; -fx-background-radius: 30;" text="Connecter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="sinscrireButtonInscription" layoutX="139.0" layoutY="373.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" style="-fx-background-color: #0AB8DA; -fx-background-radius: 30;" text="S'inscrire" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="143.0" layoutY="48.0" prefHeight="50.0" prefWidth="222.0" text="Inscrivez-vous" textFill="#0bb8da">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="passFieldnscription" layoutX="109.0" layoutY="258.0" prefHeight="50.0" prefWidth="291.0" promptText="Mot de passe" style="-fx-background-radius: 30;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPaneHome" minHeight="500.0" minWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.HomeAdminController">
+   <top>
+      <VBox fx:id="topHomeContent" prefHeight="200.0" prefWidth="648.0" style="-fx-background-color: #A0CFD9;" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane prefHeight="99.0" prefWidth="648.0">
+               <children>
+                  <ImageView fitHeight="106.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/book.png" />
+                     </image>
+                  </ImageView>
+                  <VBox prefHeight="200.0" prefWidth="501.0">
+                     <children>
+                        <Label text="E-Book">
+                           <font>
+                              <Font name="System Bold" size="39.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#010f3e" />
+                                    <Stop color="#0029b2" offset="0.05684931506849314" />
+                                    <Stop color="#089db5" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label text="Administrer votre biblothéque" textFill="#031284">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="50.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </FlowPane>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </top>
+   <center>
+      <GridPane fx:id="centerHomeContent" alignment="CENTER" hgap="10.0" minHeight="400.0" vgap="10.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <padding>
+            <Insets bottom="40.0" top="40.0" />
+         </padding>
+         <children>
+            <Button fx:id="gestionLivreButton" contentDisplay="TOP" mnemonicParsing="false" onAction="#onGestionLivreButton" prefHeight="150.0" prefWidth="200.0" style="-fx-opacity: 0.9;" text="Gestion de Livres" GridPane.halignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/bookManage.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="gestionUsersButton" contentDisplay="TOP" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#onGestionUsersButton" prefHeight="150.0" prefWidth="200.0" text="Gestion des utilisateurs" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/userss.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="statistiqueButton" contentDisplay="TOP" layoutX="240.0" layoutY="50.0" mnemonicParsing="false" onAction="#onStatistique" prefHeight="150.0" prefWidth="200.0" text="Statistique" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="accesDirectButton" contentDisplay="TOP" layoutX="429.0" layoutY="50.0" mnemonicParsing="false" onAction="#onAccesDirect" prefHeight="150.0" prefWidth="200.0" text="Accès direct" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/app.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="editAdminCompteButton" contentDisplay="TOP" layoutX="50.0" layoutY="184.0" mnemonicParsing="false" onAction="#onEditAdminCompteButton" prefHeight="150.0" prefWidth="200.0" text="Modifier votre compte" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/editAdmin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="fermerButton" contentDisplay="TOP" layoutX="240.0" layoutY="184.0" mnemonicParsing="false" onAction="#onFermerButton" prefHeight="150.0" prefWidth="200.0" text="Fermer" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <graphic>
+                  <ImageView fitHeight="67.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="30.0" right="30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+</BorderPane>

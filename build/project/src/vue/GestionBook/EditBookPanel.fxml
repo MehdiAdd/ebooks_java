@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="930.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.EditBookController">
+   <top>
+      <VBox prefHeight="59.0" prefWidth="466.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="56.0" prefWidth="538.0" text="Modifier Un livre">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="282.0" prefWidth="466.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="810.0" prefWidth="440.0" spacing="10.0">
+               <children>
+                  <CheckBox fx:id="couvertureChek" mnemonicParsing="false" onAction="#onCouvertureChek" text="Modifier la section ci-dessous">
+                     <VBox.margin>
+                        <Insets left="10.0" top="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <HBox fx:id="covertureSection" disable="true" prefHeight="186.0" prefWidth="466.0">
+                     <children>
+                        <BorderPane prefHeight="186.0" prefWidth="178.0">
+                           <center>
+                              <ImageView fx:id="coverImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                                 <BorderPane.margin>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </BorderPane.margin>
+                                 <image>
+                                    <Image url="@../../images/image.png" />
+                                 </image>
+                              </ImageView>
+                           </center>
+                        </BorderPane>
+                        <Button fx:id="selectionnerCovertureButton" mnemonicParsing="false" onAction="#onselectionnerCovertureButton" prefHeight="42.0" prefWidth="219.0" style="-fx-background-radius: 30;" text="Selectionner la couverture">
+                           <HBox.margin>
+                              <Insets left="30.0" top="70.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+                  <CheckBox fx:id="informationsLivreChek" mnemonicParsing="false" onAction="#onInformationsLivreChek" text="Modifier la section ci-dessous">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <GridPane fx:id="informationLivreSection" disable="true" prefHeight="294.0" prefWidth="470.0" vgap="10.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.4000244140625" minWidth="10.0" prefWidth="171.4000244140625" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="383.0" minWidth="10.0" prefWidth="268.9999755859375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" minHeight="33.0" prefHeight="33.0" prefWidth="208.0" text="Titre">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="titreField" prefHeight="26.0" prefWidth="312.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="52.0" prefWidth="172.0" text="Date de Parition" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="12.0" prefHeight="80.0" prefWidth="172.0" text="Auteur" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dateDeParitionField" layoutX="181.0" layoutY="19.0" prefHeight="26.0" prefWidth="312.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="auteurField" layoutX="181.0" layoutY="19.0" prefHeight="26.0" prefWidth="312.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="103.0" prefHeight="13.0" prefWidth="178.0" text="Nombre de Pages" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreDePagesField" layoutX="181.0" layoutY="107.0" prefHeight="26.0" prefWidth="312.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="52.0" prefWidth="172.0" text="Genre" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="genreField" prefHeight="26.0" prefWidth="312.0" style="-fx-background-radius: 30;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets right="30.0" />
+                     </padding>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+                                  <GridPane fx:id="informationLivreSection1" disable="true" prefHeight="230.0" prefWidth="470.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="96.79996337890626" minHeight="10.0" prefHeight="46.40003051757813" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="158.39996948242188" minHeight="10.0" prefHeight="158.39996948242188" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="122.0" prefWidth="470.0" GridPane.rowIndex="1">
+                           <content>
+                              <TextArea fx:id="extraitArea" prefHeight="155.0" prefWidth="434.0" promptText="Extrait">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextArea>
+                           </content>
+                        </ScrollPane>
+                        <Label text="Extrait">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Separator prefWidth="200.0" />
+                  <CheckBox fx:id="contenuLivreChek" mnemonicParsing="false" onAction="#onContenuLivreChek" text="Modifier la section ci-dessous">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <GridPane fx:id="contenuLivreSection" disable="true" prefHeight="51.0" prefWidth="440.0" vgap="15.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.8000122070313" minWidth="10.0" prefWidth="255.79996337890623" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="268.5999755859375" minWidth="10.0" prefWidth="183.80003662109374" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="selectionnerPdfButton" alignment="CENTER" mnemonicParsing="false" onAction="#onSelectionnerPdfButton" prefHeight="42.0" prefWidth="170.0" style="-fx-background-radius: 30; -fx-background-color: E6E6E6;" text="Selectionner le PDF" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                        <Label fx:id="selectionnerPdfLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="247.0" text="Aucun livre sélectionné" />
+                     </children>
+                  </GridPane>
+                  <CheckBox fx:id="audioLivreChek" layoutX="20.0" layoutY="605.0" mnemonicParsing="false" onAction="#onAudioLivreChek" text="Modifier la section ci-dessous">
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <GridPane fx:id="audioLivreSection" disable="true" prefHeight="51.0" prefWidth="498.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="256.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="214.4000244140625" minWidth="10.0" prefWidth="184.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="selectionnerAudioLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="46.0" prefWidth="258.0" text="Aucun audio sélectionné" />
+                        <Button fx:id="selectionnerAudioButton" alignment="CENTER" mnemonicParsing="false" onAction="#onSelectionnerAudioButton" prefHeight="42.0" prefWidth="170.0" style="-fx-background-radius: 30; -fx-background-color: E6E6E6;" text="Selectionner l'audio" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Separator orientation="VERTICAL" prefHeight="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="58.0" prefWidth="466.0" style="-fx-background-color: #0AB8DA; -fx-background-radius: 40;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="2.0" layoutY="-2.0" onMouseClicked="#onModifierButton" prefHeight="60.0" prefWidth="426.0" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+</BorderPane>

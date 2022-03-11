@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Ebooks.jnlp">
+  <information>
+    <title>Ebooks</title>
+    <vendor>Mehdi.Adnani</vendor>
+    <description>E-Book</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Ebooks.jar" size="3286068" download="eager" />
+    <jar href="libs\jlayer-1.0.1.jar" size="143624" download="eager" />
+    <jar href="libs\mysql-connector-java-5.1.48.jar" size="1006956" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="application.Main"  name="E-Book" />
+  <update check="background"/>
+</jnlp>

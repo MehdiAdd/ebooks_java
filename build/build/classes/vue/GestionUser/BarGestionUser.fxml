@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" prefHeight="667.0" prefWidth="951.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.BarGestionUserController">
+   <left>
+      <VBox fx:id="barPane" onMouseEntered="#mouseEnterBar" onMouseExited="#mouseExitBar" opacity="0.89" prefHeight="667.0" prefWidth="40.0" spacing="25.0" style="-fx-background-color: #E9E9E9;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="searchBox" onMouseEntered="#mouseInSearch" onMouseExited="#mouseOutSearch" prefHeight="55.0" prefWidth="67.0">
+               <children>
+                  <ImageView fitHeight="63.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/searsh.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchField" prefHeight="32.0" prefWidth="189.0" style="-fx-background-radius: 30;" visible="false">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="retourBox" onMouseClicked="#onretour" onMouseEntered="#mouseinretour" onMouseExited="#mouseoutretour" prefHeight="55.0" prefWidth="72.0">
+               <children>
+                  <ImageView fitHeight="57.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/goBack.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="retourlLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="213.0" text="Retour" visible="false">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="editBox" onMouseClicked="#onedit" onMouseEntered="#mouseInedit" onMouseExited="#mouseOutedit" prefHeight="54.0" prefWidth="242.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/editBook.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="modifierLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="215.0" text="Modifier" visible="false">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" top="10.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </HBox>
+            <HBox fx:id="deleteBox" onMouseClicked="#ondelete" onMouseEntered="#mouseInDelete" onMouseExited="#mouseOutDelete" prefHeight="55.0" prefWidth="66.0">
+               <children>
+                  <ImageView fitHeight="55.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/deleteBook.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="supprimerLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="213.0" text="Supprimer" visible="false">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets bottom="10.0" left="5.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="5.0" top="25.0" />
+         </padding>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane fx:id="centerBorderPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Label text="Gestion des utilisateurs" BorderPane.alignment="TOP_LEFT">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets bottom="10.0" left="5.0" top="20.0" />
+                     </BorderPane.margin>
+                  </Label>
+               </top>
+               <center>
+                   <ScrollPane fitToHeight="true" fitToWidth="true" pannable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <content>
+                  <TableView fx:id="table" prefHeight="46.0" prefWidth="662.0">
+                    <columns>
+                      <TableColumn fx:id="id" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="nom" prefWidth="195.19993591308594" text="Nom" />
+                        <TableColumn fx:id="prenom" prefWidth="172.7999267578125" text="Prenom" />
+                        <TableColumn fx:id="email" prefWidth="75.0" text="Email" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </content>
+            </ScrollPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </center>
+   
+</BorderPane>
