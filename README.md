@@ -2,7 +2,7 @@
 
 # E-Book
 
-![](https://img.shields.io/badge/Java-Fx-orange) ![](https://img.shields.io/badge/Java-Fx-orange)
+![](https://img.shields.io/badge/Java-Fx-orange) 
 
 It's a desktop app developed with java. It represents an electronic library. it consists of two parts : backOffice and frontOffice.
 
