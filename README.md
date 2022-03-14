@@ -6,7 +6,7 @@
 
 It's a desktop app developed with java. It represents an electronic library. it consists of two parts : backOffice and frontOffice.
 
-- FrontOffice: is designed for normal users. after login, they could whether navigate through all the available books, rate them or add some books into favorite as well.
+- FrontOffice: is designed for normal users. after the login, they could whether navigate through all the available books, rate them or add some books into favorite as well.
 - BackOffice: is the private part for the admin. in which he can manage the books, users and even visualize some statistics related to books.
 
 ## Installation & Configuration
@@ -16,11 +16,11 @@ After setting up your environment to jdk 1.8. you are almost done the only thing
 
 ## How to use
 ### Login page
-- Once running the app the first page is emerged which is login page
+- Once running the app the first page is emerged, which is the login page
 ![](images/loginpage.png)
 
 ### FrontOffice
-- The user can browse through the books add some of them to favorite, rate them, download books, etc..
+- The user can browse through the books add some of them to favorite, rate them, read them, etc..
 ![](images/browsing.gif)
 
 ### BackOffice
