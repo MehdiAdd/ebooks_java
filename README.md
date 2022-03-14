@@ -15,6 +15,21 @@ After setting up your environment to jdk 1.8. you are almost done the only thing
 ![](images/connexionDB.png)
 
 ## How to use
-
-Once running the app the first page is emerged which is login page
+### Login page
+- Once running the app the first page is emerged which is login page
 ![](images/loginpage.png)
+
+### FrontOffice
+- The user can browse through the books add some of them to favorite, rate them, download books, etc..
+![](images/browsing.gif)
+
+### BackOffice
+- As i mentioned. this part is dedicated for admin by wih he can manage all the sort of books, users etc...
+- it is accessible after the admin authentication (using admin as email and password)
+![](images/dashbord.png)
+#### Book management
+![](images/editBook.png)
+#### User management
+![](images/edituser.png)
+#### Book statistics
+![](images/statitics.png)
