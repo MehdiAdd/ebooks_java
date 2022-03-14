@@ -24,7 +24,7 @@ After setting up your environment to jdk 1.8. you are almost done the only thing
 ![](images/browsing.gif)
 
 ### BackOffice
-- As i mentioned. this part is dedicated for admin by wih he can manage all the sort of books, users etc...
+- As i mentioned. this part is dedicated for admin by which he can manage all the sort of books, users etc...
 - it is accessible after the admin authentication (using admin as email and password)
 ![](images/dashbord.png)
 #### Book management
