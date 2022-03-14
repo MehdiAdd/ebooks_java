@@ -1,1 +1,1 @@
-[](images/book.png)
+![](images/book.png)
