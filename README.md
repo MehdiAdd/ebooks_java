@@ -1,7 +1,8 @@
 ![](images/book.png)
 # E-Book
 ![](https://img.shields.io/badge/Java-Fx-orange) ![](https://img.shields.io/badge/Java-Fx-orange)
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+
+
 It's a desktop app developed with java. It represents an electronic library. it consists of two parts : backOffice and frontOffice.  
 - FrontOffice: is designed for normal users. after login, they could whether navigate through all the available books, rate them or add some books into favorite as well. 
 - BackOffice: is the private part for  the admin. in which he can manage the books, users and even visualize some statistics related to books.
